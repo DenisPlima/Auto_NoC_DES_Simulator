@@ -2,9 +2,11 @@
 
 Discret Event Simulator for NoCs using SimEvent's toolbox of MathWorks. This project aims to explore and estimate NoCs' performances   with no need to RTL implementation.
 
-## Author 
+## Author(s) 
 
 Nejib Mediouni
+Samir Ben Abid
+Salem Hasnaoui
       
 -----------------
 
