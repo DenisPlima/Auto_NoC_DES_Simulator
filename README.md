@@ -4,9 +4,9 @@ Discret Event Simulator for NoCs using SimEvent's toolbox of MathWorks. This pro
 
 ## Author(s) 
 
-Nejib Mediouni
-Samir Ben Abid
-Salem Hasnaoui
+- Nejib Mediouni
+- Samir Ben Abid
+- Salem Hasnaoui
       
 -----------------
 
