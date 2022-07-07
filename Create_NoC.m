@@ -27,11 +27,11 @@ block_size=150;
 init_X=150;
 init_Y=init_X+block_size;
 %Define Spaces Between Blocks
-spacing=50;
+spacing=100;
 
 % Config Grid Size
-lin=4;
-col=4;
+lin=5;
+col=5;
 
 % Add a block and place
 k=1;
@@ -52,7 +52,24 @@ for j=1:col
     end
 end
 
-% add_line(gcs,'Gain/1','Scope/1')
+
+%Wiring E->W    E<-W
+for j=1:lin:lin*col
+    for i=j:j+(lin-2)
+        add_line('Teste',strcat('Router',int2str(i),'/RConn3'),strcat('Router',int2str(i+1),'/LConn2'), 'autorouting', 'on')
+        add_line('Teste',strcat('Router',int2str(i+1),'/RConn2'),strcat('Router',int2str(i),'/LConn3'), 'autorouting', 'on')
+    end
+end
+
+
+% Wiring N->S    S<-N
+for j=1:lin
+    for i=j:lin:(col-1)*lin
+        add_line('Teste',strcat('Router',int2str(i),'/RConn4'),strcat('Router',int2str(i+lin),'/RConn1')', 'autorouting', 'on')
+        add_line('Teste',strcat('Router',int2str(i+lin),'/LConn1'),strcat('Router',int2str(i),'/LConn4'), 'autorouting', 'on')
+    end
+end
+
 
 % % Set a couple of model parameters to eliminate warning messages
 % set_param(gcs,...
