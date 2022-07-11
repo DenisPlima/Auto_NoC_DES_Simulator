@@ -32,7 +32,7 @@ spacing=130;
 
 % Config Grid Size
 lin=4;
-col=4;
+col=2;
 
 %% Add a block and place
 k=1;
@@ -42,6 +42,7 @@ for j=1:col
     for i=1:lin
         pos1_X=init_X+(block_size+spacing)*i;
         pos2_X=init_Y+(block_size+spacing)*i;
+        
         % ROUTERS
         add_block('simple_router/Router00', [gcs,strcat('/Router',int2str(k))],...
             'Position', [ pos1_X pos1_Y pos2_X pos2_Y],...
@@ -52,13 +53,18 @@ for j=1:col
             'S','1e-6');
         %PE's
         
+        load traffic
+        
         add_block('traffic_generator_sink/Processor', [gcs,strcat('/PE',int2str(k))],...
             'Position', [ pos1_X+15 pos1_Y+(block_size+20) pos2_X-15 pos2_Y+70],...
             'ME',int2str(k),...
             'Inst',strcat("'","Inst",int2str(k),"'"),...
             'Router',strcat("'","Mean",int2str(k),"'"),...
             'Loss',strcat("'","Loss",int2str(k),"'"),...
-            'N',strcat("'","N",int2str(k),"'"));
+            'N',strcat("'","N",int2str(k),"'"),...
+            'V',strcat("[",strjoin(string(traffic{k})),"]"),...           
+            'P','ones(1,3)./3');
+        %'V',strcat("[","2 3 4","]")
         k=k+1;
     end
 end
