@@ -7,8 +7,8 @@ clc
 [crm] = create_chrom([1 2 3 4 5 6 7 8],8);
 
 %% Create Source and Target (Nodes Traffic)
-s=randi(8,1,10);
-t=randi(8,1,10);
+s=randi(8,1,10); %----------------------------
+t=randi(8,1,10); %----------------------------
 
 %% Convert S_Proc and T_Proc
 [new_crm,ft_crm,s_proc,t_proc] = conversion(crm,8,s,t);
@@ -35,4 +35,4 @@ for i=1:length(traffic)
 end
 
 %%
-save traffic
+save('Traffic_Pattern.mat','traffic')
