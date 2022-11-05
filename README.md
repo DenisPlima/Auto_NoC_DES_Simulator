@@ -22,7 +22,7 @@ How to use:
 
 create_synth_chrom(N_Proc) - Create a synthetic cromossome - N_Proc (Number of Processors)
 
-create_arch(lin,col) - Create NoC Architecture - (lin - Number of Rows col - Number of columns)
+create_arch(lin,col) - Create NoC Architecture - (lin - Number of Rows     col - Number of columns)
 
  
  
