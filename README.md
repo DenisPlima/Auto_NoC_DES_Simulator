@@ -1,19 +1,22 @@
-# NoC DES Simulator
+# Auto-NoC DES Simulator
 
-Discret Event Simulator for NoCs using SimEvent's toolbox of MathWorks. This project aims to explore and estimate NoCs' performances   with no need to RTL implementation.
+Discret Event Simulator for NoCs using SimEvent's toolbox of MathWorks. This project aims to explore and estimate NoCs' performances with no need to RTL implementation.
 
-## Author(s) 
+Created by
 
 - Nejib Mediouni
 - Samir Ben Abid
 - Salem Hasnaoui
-      
------------------
 
-Folder "noc_mesh_2D_4x4_model" : includes all the necessary files for modeling and simulating a 2D NoC in simunlink blocs of Mathworks.
+Automated and extended by
 
-Folder "noc_mesh_3D_4x4x3_model" :  includes all the necessary files for modeling and simulating a 3D NoC.
+- Denis P. Lima (H4ngm4n)
 
+For more information:
+
+NRTBox: A Matlab Simulink toolbox for NoC switch performance evaluation and early architectural exploration using discrete event simulation.
+
+https://ieeexplore.ieee.org/document/7396743
 
 
  
