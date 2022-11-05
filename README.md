@@ -10,7 +10,7 @@ Created by
 
 Automated and extended by
 
-- Denis P. Lima (H4ngm4n)
+- Denis P. Lima (H4ngm4n) - 2022
 
 For more information:
 
